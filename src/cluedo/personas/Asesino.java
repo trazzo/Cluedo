@@ -44,9 +44,13 @@ public class Asesino extends Persona {
 	}
 	
 	public void getListaVictimas() {
+		int i = 1;
+		System.out.println("*************LISTA DE VICTIMAS**************");
 		for(Objetivo victima : this.listaVictimas) {
-			System.out.println(victima.toString());
+			System.out.println("* Victima: " + i + " => " + victima.toString()+ " *");
+			i++;
 		}
+		System.out.println("********************************************");
 	}
 
 	public void setListaVictimas(ArrayList<Objetivo> listaVictimas) {

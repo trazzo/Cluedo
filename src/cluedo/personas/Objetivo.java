@@ -19,7 +19,7 @@ public class Objetivo extends Persona {
 
 	@Override
 	public String toString() {
-		return "Objetivo [nombre=" + this.nombre + ", dni=" + this.dni + ", edad=" + this.edad + ", estaVivo=" + this.estaVivo + "]";
+		return " nombre: " + this.nombre + ", dni: " + this.dni;
 	}
 	
 	

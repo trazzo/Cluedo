@@ -9,13 +9,14 @@ public class Principal {
 		Asesino asesino1 = new Asesino("Debén","12345678J",20,90,"Machete");
 		
 		Objetivo objetivo1 = new Objetivo("Satur","12345678K", 20);
+		Objetivo objetivo2 = new Objetivo("Rico","12345678Q", 34);
 		
 		boolean estadoObjetivo = objetivo1.isEstaVivo();
-		/*System.out.println("estado del objetivo antes del asesinato: " + estadoObjetivo);
-		System.out.println(asesino1.matar(objetivo1));
-		estadoObjetivo = objetivo1.isEstaVivo();
-		System.out.println("estado del objetivo después del asesinato: " + estadoObjetivo);
-		asesino1.getListaVictimas();*/
+		asesino1.matar(objetivo1);
+		asesino1.matar(objetivo2);
+		
+		
+		asesino1.getListaVictimas();
 	}
 
 }
