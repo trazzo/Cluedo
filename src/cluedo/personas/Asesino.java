@@ -45,12 +45,12 @@ public class Asesino extends Persona {
 	
 	public void getListaVictimas() {
 		int i = 1;
-		System.out.println("*************LISTA DE VICTIMAS**************");
+		pintarCabeceraLista();
 		for(Objetivo victima : this.listaVictimas) {
 			System.out.println("* Victima: " + i + " => " + victima.toString()+ " *");
 			i++;
 		}
-		System.out.println("********************************************");
+		pintarPieLista();
 	}
 
 	public void setListaVictimas(ArrayList<Objetivo> listaVictimas) {
@@ -62,9 +62,13 @@ public class Asesino extends Persona {
 		return "Asesino [efectividad=" + efectividad + ", modus=" + modus + "]";
 	}
 
+	private void pintarCabeceraLista() {
+		System.out.println("*************LISTA DE VICTIMAS DE: " + this.getNombre().toUpperCase() + "**************");
+	}
 	
-	
-	
+	private void pintarPieLista() {
+		System.out.println("***************************************************");
+	}
 	
 	
 }

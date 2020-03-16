@@ -12,6 +12,11 @@ public class Policia extends Persona {
 		this.placaIdentificacion = placaIdentificacion;
 		this.habilidad = habilidad;
 	}
+	
+	public void detenerAsesino(Asesino asesino) {
+		//TODO: método para que el policía nombre a las víctimas del asesino
+		System.out.println(this.nombre + ": \"" + asesino.nombre + " quedas detenido por el asesinato de: " + asesino.getListaVictimas());
+	}
 
 	public String getCuerpo() {
 		return cuerpo;
