@@ -1,5 +1,7 @@
 package cluedo.personas;
 
+import java.util.ArrayList;
+
 public class Policia extends Persona {
 	
 	private String cuerpo;
@@ -14,8 +16,14 @@ public class Policia extends Persona {
 	}
 	
 	public void detenerAsesino(Asesino asesino) {
-		//TODO: método para que el policía nombre a las víctimas del asesino
-		System.out.println(this.nombre + ": \"" + asesino.nombre + " quedas detenido por el asesinato de: " + asesino.getListaVictimas());
+		ArrayList<Objetivo> listaVictimas = new ArrayList<Objetivo>();
+		
+		System.out.println(this.nombre + ": \"" + asesino.nombre + ", quedas detenido por el asesinato de: ");
+		listaVictimas = asesino.getListaVictimasDetencion();
+		for(Objetivo victima : listaVictimas) {
+			System.out.println(victima.toString());
+		}
+		System.out.println(" .Todo lo que digas podrá ser usado en tu contra.\"");
 	}
 
 	public String getCuerpo() {

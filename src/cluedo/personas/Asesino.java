@@ -52,6 +52,10 @@ public class Asesino extends Persona {
 		}
 		pintarPieLista();
 	}
+	
+	public ArrayList<Objetivo> getListaVictimasDetencion() {
+		return this.listaVictimas;
+	}
 
 	public void setListaVictimas(ArrayList<Objetivo> listaVictimas) {
 		this.listaVictimas = listaVictimas;

@@ -17,10 +17,19 @@ public class Investigacion {
 	}
 	
 	public void iniciarInvestigacion() {
+		///////////////////////////////////////////////////////////////////////////////////////////////////////
+		//TODO: cambiar el orden de los if para hacerlo de una manera más optimizada
+		///////////////////////////////////////////////////////////////////////////////////////////////////////
 		if(this.policia.getHabilidad() >= this.asesino.getEfectividad()) {
-			//TODO: comprobar si el asesino es culpable
-			this.policia.detenerAsesino(this.asesino);
-			//TODO: comprobar qué ocurre si el policía tiene menos habilidad que efectividad tiene el asesino
+			if(this.asesino.getListaVictimasDetencion().isEmpty()) {
+				System.out.println("La investigación " + this.numExpediente + " ha concluido. " + this.asesino.getNombre() 
+				+ " es inocente.");
+			} else {
+				this.policia.detenerAsesino(this.asesino);
+			}
+		}else {
+			System.out.println("Comisario, soy el policía: " + this.policia.getNombre() + " con placa: " + this.policia.getPlacaIdentificacion()
+			+ " le informamos de que el caso " + this.numExpediente + " ha quedado sin resolver.");
 		}
 	}
 }
