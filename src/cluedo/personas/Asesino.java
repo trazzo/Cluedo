@@ -2,6 +2,8 @@ package cluedo.personas;
 
 import java.util.ArrayList;
 
+import cluedo.morgue.Morgue;
+
 public class Asesino extends Persona {
 	
 	private int efectividad;
@@ -22,6 +24,7 @@ public class Asesino extends Persona {
 		}else {
 			objetivo.setEstaVivo(false);
 			this.listaVictimas.add(objetivo);
+			Morgue.getFrigorifico().add(objetivo);
 			return "El objetivo " + objetivo.getNombre() 
 					+ " ha sido asesinado por " + this.getNombre();
 		}

@@ -1,6 +1,7 @@
 package cluedo.principal;
 
 import cluedo.actuacionesPoliciales.Investigacion;
+import cluedo.morgue.Morgue;
 import cluedo.personas.Asesino;
 import cluedo.personas.Objetivo;
 import cluedo.personas.Policia;
@@ -21,12 +22,17 @@ public class Principal {
 		asesino1.matar(objetivo1);
 		asesino1.matar(objetivo2);
 		
+		
 		Investigacion investigacion1 = new Investigacion(policia1, asesino1, 1);
 		///////////////////////////////////////////////////////////////////////////////////////////////////////
 		//TODO: Crear una clase Morgue que contenga un ArrayList con todas las víctimas de todos los asesinos./
 		///////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		Dios.resucitar(asesino1, "12345678K");
+		
+		asesino1.getListaVictimas();
+		
+		Morgue.verContenidoFrigorifico();
 		
 		
 	

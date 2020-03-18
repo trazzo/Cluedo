@@ -23,7 +23,7 @@ public class Policia extends Persona {
 		for(Objetivo victima : listaVictimas) {
 			System.out.println(victima.toString());
 		}
-		System.out.println(" .Todo lo que digas podrá ser usado en tu contra.\"");
+		System.out.println("Todo lo que digas podrá ser usado en tu contra.\"");
 	}
 
 	public String getCuerpo() {

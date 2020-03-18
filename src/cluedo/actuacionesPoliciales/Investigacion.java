@@ -17,17 +17,12 @@ public class Investigacion {
 	}
 	
 	public void iniciarInvestigacion() {
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
-		//TODO: cambiar el orden de los if para hacerlo de una manera más optimizada
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
-		if(this.policia.getHabilidad() >= this.asesino.getEfectividad()) {
-			if(this.asesino.getListaVictimasDetencion().isEmpty()) {
-				System.out.println("La investigación " + this.numExpediente + " ha concluido. " + this.asesino.getNombre() 
-				+ " es inocente.");
-			} else {
-				this.policia.detenerAsesino(this.asesino);
-			}
-		}else {
+		if(this.asesino.getListaVictimasDetencion().isEmpty()) {
+			System.out.println("La investigación " + this.numExpediente + " ha concluido. " + this.asesino.getNombre() 
+			+ " es inocente.");
+		} else if (this.policia.getHabilidad() >= this.asesino.getEfectividad()){
+			this.policia.detenerAsesino(this.asesino);
+		} else {
 			System.out.println("Comisario, soy el policía: " + this.policia.getNombre() + " con placa: " + this.policia.getPlacaIdentificacion()
 			+ " le informamos de que el caso " + this.numExpediente + " ha quedado sin resolver.");
 		}
