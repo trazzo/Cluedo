@@ -22,11 +22,7 @@ public class Principal {
 		asesino1.matar(objetivo1);
 		asesino1.matar(objetivo2);
 		
-		
 		Investigacion investigacion1 = new Investigacion(policia1, asesino1, 1);
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
-		//TODO: Crear una clase Morgue que contenga un ArrayList con todas las víctimas de todos los asesinos./
-		///////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		Dios.resucitar(asesino1, "12345678K");
 		
@@ -34,11 +30,11 @@ public class Principal {
 		
 		Morgue.verContenidoFrigorifico();
 		
-		
-	
-		
-		
-		
+		//////////////////////////////////
+		//TODO: 1 Renombrar el paquete cluedo.morgue para que se llame cluedo.estructuras
+		//		2 Crear en este paquete una clase Carcel que pueda ser instanciada
+		//		3 Hacer que si el asesino es detenido ingrese en una carcel (se encargar de encarcelar el policia)
+		//////////////////////////////////
 	}
 
 }
